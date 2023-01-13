@@ -4,10 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import id.gustonecrush.androidsuitmediamobiletest.R
 import kotlinx.android.synthetic.main.activity_second_screen.*
 
 class SecondScreen : AppCompatActivity() {
+
+    private lateinit var nameProp: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +27,13 @@ class SecondScreen : AppCompatActivity() {
             tv_name.text = "John Doe"
         }
 
-        // check the intent username, to display the data
         if(username != "") {
-            tv_username.text = username
+            tv_username.visibility = View.INVISIBLE
+            tv_selected.visibility = View.VISIBLE
+            tv_selected.text = username
         } else {
-            tv_username.text = "Selected User Name"
+            tv_username.visibility  = View.VISIBLE
+            tv_selected.visibility  = View.INVISIBLE
         }
 
         // invoke the function
@@ -56,12 +61,13 @@ class SecondScreen : AppCompatActivity() {
     * -> button to move the activity to third screen where user could choose the user
     * */
     private fun btnChooseUser() {
-        // create intent
-        val intent = Intent(this, ThirdScreen::class.java)
-
         // move activity when btn_back clicked
         btn_choose.setOnClickListener {
-            startActivity(intent)
+            // create intent
+            val intent = Intent(this, ThirdScreen::class.java).also {
+                it.putExtra("name", tv_name.text.toString())
+                startActivity(it)
+            }
         }
     }
 }

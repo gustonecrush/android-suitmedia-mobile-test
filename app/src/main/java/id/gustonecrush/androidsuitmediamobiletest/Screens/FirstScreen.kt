@@ -48,19 +48,29 @@ class FirstScreen : AppCompatActivity() {
     *    with transfer data name which inputted in first screen
     * */
     private fun btnNextHandler() {
-        // create intent
-        val intent = Intent(this, SecondScreen::class.java).apply {
-            // get edit text name value
-            val name   = input_name.text
-            // put edit text name value to intent
-            intent.putExtra("name", name)
-        }
-        
         // move activity when btn_next clicked
         btn_next.setOnClickListener {
-            startActivity(intent)
+            if(input_name.text.isEmpty()) {
+                Toast.makeText(this, "Fill the name", Toast.LENGTH_SHORT).show()
+            } else {
+                // create intent
+                val intent = Intent(this@FirstScreen, SecondScreen::class.java).also {
+                    // get edit text name value
+                    val name = input_name.text.toString()
+                    // put edit text name value to intent
+                    if (name != "") {
+                        it.putExtra("name", name)
+                    } else {
+                        it.putExtra("name", "John Doe")
+                    }
+                    it.putExtra("username", "")
+
+                    startActivity(it)
+                }
+            }
         }
     }
+
     /*
      * private fun concatReversedLetter
      * -> is to concat reversed letter

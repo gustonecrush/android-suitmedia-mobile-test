@@ -46,4 +46,14 @@ class UserAdapter(private val list: ArrayList<Data>, private val onUserClickList
 
     override fun getItemCount(): Int = list.size
 
+    fun addList(items: ArrayList<Data>) {
+        list.addAll(items)
+        notifyDataSetChanged()
+    }
+
+    fun clear() {
+        list.clear()
+        notifyDataSetChanged()
+    }
+
 }

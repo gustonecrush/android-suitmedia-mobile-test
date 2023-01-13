@@ -86,6 +86,20 @@
         android:layout_centerVertical="true"
         />
 
+    <!-- Selected User Name -->
+    <TextView
+        android:id="@+id/tv_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected User Name"
+        android:textSize="23dp"
+        android:textColor="#04021D"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        />
+
     <!-- Button Choose User -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_choose"
