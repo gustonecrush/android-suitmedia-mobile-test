@@ -79,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selected User Name"
-        android:textSize="20dp"
+        android:textSize="23dp"
         android:textColor="#04021D"
         android:fontFamily="@font/poppins_semibold"
         android:layout_centerHorizontal="true"
@@ -88,7 +88,7 @@
 
     <!-- Button Choose User -->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_check"
+        android:id="@+id/btn_choose"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:paddingVertical="10dp"

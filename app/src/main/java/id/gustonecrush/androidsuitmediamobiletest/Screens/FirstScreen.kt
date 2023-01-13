@@ -49,12 +49,13 @@ class FirstScreen : AppCompatActivity() {
     * */
     private fun btnNextHandler() {
         // create intent
-        val intent = Intent(this, SecondScreen::class.java)
-        // get edit text name value
-        val name   = input_name.text
-        // put edit text name value to intent
-        intent.putExtra("name", name)
-
+        val intent = Intent(this, SecondScreen::class.java).apply {
+            // get edit text name value
+            val name   = input_name.text
+            // put edit text name value to intent
+            intent.putExtra("name", name)
+        }
+        
         // move activity when btn_next clicked
         btn_next.setOnClickListener {
             startActivity(intent)
