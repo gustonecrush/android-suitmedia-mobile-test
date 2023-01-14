@@ -5,7 +5,7 @@ This project was done as a test as a mobile developer at Suitmedia on the Merdek
 
 ## START PROJECT
 
-- To get the *completed code*, clone the repo or download the repo
+To get the *completed code*, clone the repo or download the repo
 
 ## DESIGN
 
