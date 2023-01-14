@@ -11,6 +11,47 @@ To get the *completed code*, clone the repo or download the repo
 
 The design was provided by Suitmedia in the context of selection as a mobile developer.
 
+## API CONSUME
+
+This application consumed the API from <a href="https://reqres.in">Reqres In Fake User</a>
+
+### Get Users
+
+Request :
+
+- Method : GET
+- Endpoint : `/api/users`
+- Header :
+  - Accept: application/json
+  - Autohorization: Bearer token
+- Query Param:
+  - page: integer
+
+Response :
+
+```json
+{
+  "page": "integer",
+  "per_page": "integer",
+  "total": "integer",
+  "total_pages": "integer",
+  "data": [
+    {
+      "id": "integer",
+      "email": "string, email",
+      "first_name": "string",
+      "last_name": "string",
+      "avatar": "string",
+    },
+    ...
+  ],
+  "support": {
+    "url": "string",
+    "text": "string",
+  }
+}
+```
+
 ## RESULT
 
 - First Screen Layout<br/>
