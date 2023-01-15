@@ -1,5 +1,7 @@
 # Android Suitmedia Mobile Test
 
+<img src="https://i.postimg.cc/Jh5VFtqy/Screen-Shot-2023-01-16-at-01-22-21.png" />
+
 ## ABOUT
 This project was done as a test as a mobile developer at Suitmedia on the Merdeka Campus Batch 4. The project was ordered to be completed within 24 hours after redeeming the access code and working according to the instructions. Project implements the concepts of Activity, Intent, etc. There are commands that require the use of the Retrofit library as well to consume the API
 
